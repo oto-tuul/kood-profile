@@ -1,0 +1,331 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(66, 66, 66);
+  color: lightgrey;
+  font-family: 'Share Tech Mono',
+    monospace;
+}
+
+div {
+  
+}
+
+#wrapper {
+  background-color: rgb(46, 46, 46);
+  box-shadow: 1px 1px 10px black;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#userStats > div {
+  background-color: rgb(66, 66, 66);
+  margin-top: 40px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 10px black;
+}
+
+#userStats {
+  display: flex;
+  justify-content: space-between;
+}
+
+#basicId {
+  height: 300px;
+  width: 600px;
+
+  margin-left: 40px;
+
+  display: flex;
+  align-items: center;
+}
+
+#profileImg {
+  width: 150px;
+  height: 150px;
+
+  margin-left: 40px;
+}
+
+#profileTxt {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+#userSearch {
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.search {
+  width: 70%;
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+}
+
+.searchTerm {
+  width: 100%;
+  background-color: rgb(66, 66, 66);
+  color: lightgrey;
+  font-size: 20px;
+  font-family: inherit;
+  border: 3px solid #DCF900;
+  border-right: none;
+  padding: 5px;
+  padding-left: 10px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.searchTerm:focus {
+  color: white;
+}
+
+.searchButton {
+  width: 60px;
+  height: 56px;
+  border: 1px solid #DCF900;
+  background: #DCF900;
+  text-align: center;
+  color: rgb(46, 46, 46);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+#xpLevel {
+  margin-right: 40px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+#xpLevel p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#combinedDonut {
+  margin-top: 5px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#level {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  font-size: 50px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#level > p {
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+#levelDonut {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+}
+
+#numProgress {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+#graphs {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 10px;
+}
+
+
+
+#xpOverTime {
+  margin-bottom: 50px;
+}
+
+#xpFromProject {
+  margin-bottom: 200px;
+}
+
+.ct-chart {
+}
+
+.ct-chart-line {
+
+}
+
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: #DCF900 !important;
+  /* Control the thikness of your lines */
+  /* stroke-width: 5px; */ 
+}
+
+.ct-series-a .ct-bar {
+  stroke: #DCF900 !important;
+}
+
+.ct-series-a .ct-slice-donut {
+  stroke: #DCF900 !important;
+}
+
+.ct-series-b .ct-slice-donut {
+  stroke: #dcf9008c !important;
+}
+
+svg.ct-chart-bar,
+svg.ct-chart-line {
+  overflow: visible;
+}
+
+span.ct-label {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+#xpFromProject .ct-label.ct-label.ct-horizontal.ct-end {
+  font-size: 15px;
+  position: relative;
+  left: 20px;
+  justify-content: flex-end;
+  text-align: right;
+  transform-origin: 100% 0;
+  transform: translate(-100%) rotate(-45deg);
+  white-space: nowrap;
+}
+
+.ct-grids .ct-grid {
+  stroke: lightgray;
+}
+
+.ct-label {
+  color: lightgray !important;
+}
+
+/* overlay to cover everything */
+
+#overlay {
+  position: absolute;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* Full width (cover the whole page) */
+  height: 1735px;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.856);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+
+/* loading spinner */
+/* credit to Fran Perez */
+
+.loadingSpinner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  margin-top: 20%;
+}
+
+.loadingSpinner > p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: #dcf90000;
+  }
+
+  100% {
+    stroke: #DCF900;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}

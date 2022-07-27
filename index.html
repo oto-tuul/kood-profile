@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>/profile</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Share+Tech+Mono"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="userStats">
+        <div id="basicId">
+          <img id="profileImg" src="#" />
+          <div id="profileTxt">
+            <p id="profileName"></p>
+            <p id="profileId"></p>
+            <p id="profileActive"></p>
+          </div>
+        </div>
+        <div id="userSearch">
+          Search for your profile:
+          <div class="search">
+            <input
+              id="userSearchInput"
+              type="text"
+              class="searchTerm"
+              placeholder="oto-tuul"
+            />
+            <button id="userSearchBtn" type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div id="xpLevel">
+          <p>level</p>
+          <div id="combinedDonut">
+            <div id="level">00</div>
+            <div class="ct-chart .ct-square" id="levelDonut"></div>
+          </div>
+
+          <div id="numProgress">
+            0000 / 0000 B <br />
+            next level in: 0.0 kB
+          </div>
+        </div>
+      </div>
+      <div id="graphs">
+        xp earned over time
+        <div class="ct-chart ct-major-tenth" id="xpOverTime"></div>
+
+        xp earned by project
+        <div class="ct-chart ct-major-tenth" id="xpFromProject"></div>
+
+        by: oto-tuul @ kood/Jõhvi 2022
+      </div>
+    </div>
+    <div id="overlay">
+      <div class="loadingSpinner">
+        <p>Loading your profile...</p>
+        <svg
+          class="spinner"
+          width="65px"
+          height="65px"
+          viewBox="0 0 66 66"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            class="path"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
+    </div>
+    <script src="/main.js" defer></script>
+  </body>
+</html>
